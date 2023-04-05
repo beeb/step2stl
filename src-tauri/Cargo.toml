@@ -1,10 +1,10 @@
 [package]
 name = "step2stl"
-version = "0.0.0"
-description = "A Tauri App"
-authors = ["you"]
-license = ""
-repository = ""
+version = "0.1.0"
+description = "Utility to convert STEP files to STL files, without the fuss"
+authors = ["Valentin Bersier <vbersier@gmail.com>"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/beeb/step2stl"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
