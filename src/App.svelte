@@ -1,4 +1,5 @@
 <script lang="ts">
+  import './styles.css'
   import { listen } from '@tauri-apps/api/event'
   import { invoke } from '@tauri-apps/api/tauri'
 
@@ -15,6 +16,7 @@
 </script>
 
 <main class="container">
+  <h1 class="text-xl">Hi</h1>
   {JSON.stringify(error)}
 </main>
 
