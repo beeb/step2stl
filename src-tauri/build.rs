@@ -34,7 +34,7 @@ fn main() {
     if cfg!(windows) {
         println!(
             "cargo:rustc-env=PATH={};{}",
-            Path::new("./dlls").to_string_lossy(),
+            Path::new("../dlls").to_string_lossy(),
             env::var("PATH").unwrap(),
         );
     }
