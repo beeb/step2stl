@@ -11,12 +11,12 @@
       angleRes: 1.0
     },
     sla: {
-      chordError: 0.001,
+      chordError: 0.002,
       angleRes: 0.5
     },
     render: {
-      chordError: 0.0001,
-      angleRes: 0.1
+      chordError: 0.001,
+      angleRes: 0.3
     }
   }
 
