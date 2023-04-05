@@ -5,7 +5,22 @@
   import { open } from '@tauri-apps/api/dialog'
   import { default as toast, Toaster } from 'svelte-french-toast'
 
-  let quality = 'fdm'
+  const qualityValues = {
+    fdm: {
+      chordError: 0.005,
+      angleRes: 1.0
+    },
+    sla: {
+      chordError: 0.001,
+      angleRes: 0.5
+    },
+    render: {
+      chordError: 0.0001,
+      angleRes: 0.1
+    }
+  }
+
+  let quality: keyof typeof qualityValues = 'fdm'
 
   const handleClick = async () => {
     try {
@@ -33,7 +48,11 @@
       return
     }
     try {
-      await invoke('convert', { path, chordError: 0.005, angleRes: 1.0 })
+      await invoke('convert', {
+        path,
+        chordError: qualityValues[quality].chordError,
+        angleRes: qualityValues[quality].angleRes
+      })
       toast.success('Conversion complete')
     } catch (e) {
       toast.error(e.message)
