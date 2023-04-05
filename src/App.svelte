@@ -5,6 +5,8 @@
   import { open } from '@tauri-apps/api/dialog'
   import { default as toast, Toaster } from 'svelte-french-toast'
 
+  let quality = 'fdm'
+
   const handleClick = async () => {
     try {
       const selected = await open({
@@ -22,7 +24,6 @@
     } catch (e) {
       toast.error(e.message)
     }
-    toast.success('Conversion complete')
   }
 
   const convert = async (path) => {
@@ -33,6 +34,7 @@
     }
     try {
       await invoke('convert', { path, chordError: 0.005, angleRes: 1.0 })
+      toast.success('Conversion complete')
     } catch (e) {
       toast.error(e.message)
     }
@@ -45,7 +47,16 @@
 </script>
 
 <main class="p-6 w-full h-screen flex flex-col gap-6">
-  <h1 class="text-xl text-center">STEP to STL converter</h1>
+  <div class="form-control flex-row gap-4">
+    <label class="label" for="quality">
+      <span class="label-text">Quality:</span>
+    </label>
+    <select id="quality" class="select select-bordered grow" bind:value={quality}>
+      <option value="fdm">FDM Printer</option>
+      <option value="sla">SLA Printer</option>
+      <option value="render">3D Render</option>
+    </select>
+  </div>
   <div class="card bg-base-300 shadow-xl flex-grow">
     <button type="button" class="card-body flex items-center justify-center cursor-pointer" on:click={handleClick}>
       <div>Drop a file here</div>
