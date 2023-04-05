@@ -17,7 +17,9 @@
 
 <main class="container">
   <h1 class="text-xl">Hi</h1>
-  {JSON.stringify(error)}
+  <div class="mockup-code">
+    <pre><code>{JSON.stringify(error)}</code></pre>
+  </div>
 </main>
 
 <style>
