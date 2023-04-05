@@ -47,16 +47,18 @@
       toast.error('Only STEP files are supported')
       return
     }
-    try {
-      await invoke('convert', {
+    toast.promise(
+      invoke('convert', {
         path,
         chordError: qualityValues[quality].chordError,
         angleRes: qualityValues[quality].angleRes
-      })
-      toast.success('Conversion complete')
-    } catch (e) {
-      toast.error(e.message)
-    }
+      }),
+      {
+        loading: 'Converting...',
+        success: 'Conversion complete',
+        error: 'Conversion failed'
+      }
+    )
   }
 
   listen('tauri://file-drop', async (event) => {
