@@ -1,15 +1,8 @@
 use std::{env, path::Path};
 
 fn main() {
-    let home_dir = home::home_dir().unwrap();
-    let mut lib_path = home_dir.join(".nix-profile/lib");
-    let mut include_path = home_dir.join(".nix-profile/include/opencascade");
-    if cfg!(windows) {
-        lib_path = Path::new("C:\\OpenCASCADE-7.7.0-vc14-64\\opencascade-7.7.0\\win64\\vc14\\lib")
-            .to_path_buf();
-        include_path =
-            Path::new("C:\\OpenCASCADE-7.7.0-vc14-64\\opencascade-7.7.0\\inc").to_path_buf();
-    }
+    let lib_path = Path::new(".\\lib").to_path_buf();
+    let include_path = Path::new(".\\inc").to_path_buf();
 
     println!("cargo:rustc-link-search={}", lib_path.to_string_lossy());
     println!("cargo:rustc-link-lib=TKernel");
@@ -31,13 +24,11 @@ fn main() {
     println!("cargo:rerun-if-changed=src/OCCTWrapper.cpp");
     println!("cargo:rerun-if-changed=src/OCCTWrapper.hpp");
 
-    if cfg!(windows) {
-        println!(
-            "cargo:rustc-env=PATH={};{}",
-            Path::new("../dlls").to_string_lossy(),
-            env::var("PATH").unwrap(),
-        );
-    }
+    println!(
+        "cargo:rustc-env=PATH={};{}",
+        Path::new("../dlls").to_string_lossy(),
+        env::var("PATH").unwrap(),
+    );
 
     tauri_build::build()
 }
