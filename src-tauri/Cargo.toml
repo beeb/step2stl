@@ -11,6 +11,7 @@ edition = "2021"
 
 [build-dependencies]
 cxx-build = "1"
+dunce = "1"
 home = "0.5"
 tauri-build = { version = "1", features = [] }
 
@@ -27,3 +28,9 @@ cxx = "1"
 # this feature is used for production builds or when `devPath` points to the filesystem
 # DO NOT REMOVE!!
 custom-protocol = ["tauri/custom-protocol"]
+
+[profile.release]
+lto = true
+strip = true
+panic = "abort"
+codegen-units = 1
