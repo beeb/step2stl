@@ -5,9 +5,6 @@
 #include "BRepMesh_IncrementalMesh.hxx"
 #include "StlAPI_Writer.hxx"
 
-/* const double STEP_TRANS_CHORD_ERROR = 0.005;
-const double STEP_TRANS_ANGLE_RES = 1; */
-
 namespace OcctWrapper
 {
 
@@ -54,4 +51,4 @@ namespace OcctWrapper
         return writeStatus;
     }
 
-}; // namespace MyTest
+}; // namespace OcctWrapper
