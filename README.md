@@ -1,5 +1,7 @@
 # STEP to STL converter
 
+![Screenshot of the application](screenshot.png)
+
 This simple graphical utility uses the [OpenCascade](https://dev.opencascade.org/) OCCT library to convert a STEP file
 into a triangulated STL file.
 
