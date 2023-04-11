@@ -1,11 +1,11 @@
 {
-  "version": "v0.1.0",
-  "notes": "Initial release",
-  "pub_date": "2023-04-11T10:12:00Z",
+  "version": "v0.1.1",
+  "notes": "New logo!",
+  "pub_date": "2023-04-11T14:51:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTUDdZRlF5UlVxZHFmVjF1OVJNZGozdlltcXA4NmE0U252S2xmY0oxN1cyUENqbUM5d2MveXlxQjR5YWRvbGZXekFyYmR3WmFGMWdhOHZwSThZcVI2T1dvS3Ryc0o4U2dRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjgxMjA4MTExCWZpbGU6c3RlcDJzdGxfMC4xLjBfeDY0X2VuLVVTLm1zaS56aXAKNDBPdkN4Z0JGUlUydEZzUmZwcW53c0QxRWtRRGZNTlluNUw5dVJYekJ5d1Z0OFUwUXBQS3VzZG5qOFJ0ZEFFZEhaeGJtYU9QSWtodWs0U2g0RmUyQlE9PQo=",
-      "url": "https://github.com/beeb/step2stl/releases/download/v0.1.0/step2stl_0.1.0_x64.msi.zip"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTUDdZRlF5UlVxZGhTc3k1NStQMktpZTMwakphbUh3RmVVWGNjZzFWVTlsZktoSXpXaXJNQk1lS1ZXYWlqRndndFY0cmJTMFNnSUtOdTBnUTVYTWZpSkMxREQwa2h2MVFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjgxMjI0NTc1CWZpbGU6c3RlcDJzdGxfMC4xLjFfeDY0X2VuLVVTLm1zaS56aXAKcVU5TC9Kb1dJaUpqS0I0cFBkNmxMZUI4T1QzM3p3R2hJUTdDQmVsb1lkcElRbTh1L0Z3d1lKWS94ZXRBU1N5c3hZR0JVV3lCV0pDVnloc200clBWQ3c9PQo=",
+      "url": "https://github.com/beeb/step2stl/releases/download/v0.1.1/step2stl_0.1.1_x64.msi.zip"
     }
   }
 }
