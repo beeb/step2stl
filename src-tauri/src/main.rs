@@ -1,7 +1,10 @@
 // Prevents additional console window on Windows in release, DO NOT REMOVE!!
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
-use std::{env, path::PathBuf};
+use std::{
+    env,
+    path::{Path, PathBuf},
+};
 
 use anyhow::Result;
 use tauri::command;
@@ -29,7 +32,7 @@ fn convert(path: String, chord_error: f64, angle_res: f64) -> Result<(), String>
     if !path.is_file() {
         return Err("File not found".to_string());
     }
-    let stl_path = path.with_extension("stl");
+    let stl_path = get_stl_path(&path);
     let res = ffi::convert_step_to_stl(
         path.to_string_lossy().into_owned(),
         stl_path.to_string_lossy().into_owned(),
@@ -40,6 +43,24 @@ fn convert(path: String, chord_error: f64, angle_res: f64) -> Result<(), String>
         return Err("Could not convert file to STL".to_string());
     }
     Ok(())
+}
+
+fn get_stl_path(step_path: impl AsRef<Path>) -> PathBuf {
+    let step_path = step_path.as_ref();
+    let mut stl_path = step_path.to_path_buf().with_extension("stl");
+    // If the STL file already exists, append a number to the filename
+    let mut i = 1;
+    while stl_path.exists() {
+        stl_path = step_path
+            .with_file_name(format!(
+                "{}_{}.stl",
+                step_path.file_stem().unwrap().to_string_lossy(),
+                i
+            ))
+            .to_path_buf();
+        i += 1;
+    }
+    stl_path
 }
 
 fn main() {
