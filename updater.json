@@ -1,11 +1,11 @@
 {
-  "version": "v0.1.1",
-  "notes": "New logo!",
-  "pub_date": "2023-04-11T14:51:00Z",
+  "version": "v0.1.2",
+  "notes": "This version doesn't overwrite existing STL files, instead an incremental number is appended at the end of the filename.",
+  "pub_date": "2023-05-09T10:13:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTUDdZRlF5UlVxZGhTc3k1NStQMktpZTMwakphbUh3RmVVWGNjZzFWVTlsZktoSXpXaXJNQk1lS1ZXYWlqRndndFY0cmJTMFNnSUtOdTBnUTVYTWZpSkMxREQwa2h2MVFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjgxMjI0NTc1CWZpbGU6c3RlcDJzdGxfMC4xLjFfeDY0X2VuLVVTLm1zaS56aXAKcVU5TC9Kb1dJaUpqS0I0cFBkNmxMZUI4T1QzM3p3R2hJUTdDQmVsb1lkcElRbTh1L0Z3d1lKWS94ZXRBU1N5c3hZR0JVV3lCV0pDVnloc200clBWQ3c9PQo=",
-      "url": "https://github.com/beeb/step2stl/releases/download/v0.1.1/step2stl_0.1.1_x64.msi.zip"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTUDdZRlF5UlVxZHNuVjY3REhxTXNOeHZYU1FTZE9YS0NIV1NkRTFzRTRiQmxIaGhqQ1pRekJteTB1QXpzczBkWDNzckxWL1puVGwrLzZUcUlVeGd0a0lXWDZ5SERCcndVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjgzNjI3MDgzCWZpbGU6c3RlcDJzdGxfMC4xLjJfeDY0X2VuLVVTLm1zaS56aXAKbmN4Vzd5Mk4vNEtuclFSQmt1aVg1U0hXak5RY2YzWWNNM2RwUDI4dDNHZlhDKzdSVllDa01semNCRnlKT1FKOUdzcW1NT01ORWhiK2ppL0JueUxyQ3c9PQo=",
+      "url": "https://github.com/beeb/step2stl/releases/download/v0.1.2/step2stl_0.1.2_x64_en-US.msi.zip"
     }
   }
 }
