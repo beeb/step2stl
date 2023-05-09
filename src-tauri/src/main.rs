@@ -27,7 +27,7 @@ mod ffi {
 }
 
 #[command]
-fn convert(path: String, chord_error: f64, angle_res: f64) -> Result<(), String> {
+fn convert(path: String, chord_error: f64, angle_res: f64) -> Result<String, String> {
     let path = PathBuf::from(path);
     if !path.is_file() {
         return Err("File not found".to_string());
@@ -42,7 +42,7 @@ fn convert(path: String, chord_error: f64, angle_res: f64) -> Result<(), String>
     if !res {
         return Err("Could not convert file to STL".to_string());
     }
-    Ok(())
+    Ok(stl_path.to_string_lossy().into_owned())
 }
 
 fn get_stl_path(step_path: impl AsRef<Path>) -> PathBuf {

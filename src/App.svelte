@@ -55,8 +55,14 @@
       }),
       {
         loading: 'Converting...',
-        success: 'Conversion complete',
+        success: (stlPath: string) => {
+          const filename = stlPath.replace(/^.*[\\\/]/, '')
+          return `File converted: ${filename}`
+        },
         error: 'Conversion failed'
+      },
+      {
+        duration: 3000
       }
     )
   }
