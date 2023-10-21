@@ -3,7 +3,7 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 import sveltePreprocess from 'svelte-preprocess'
 
 // https://vitejs.dev/config/
-export default defineConfig(async () => ({
+export default defineConfig({
   plugins: [
     svelte({
       preprocess: [
@@ -25,7 +25,15 @@ export default defineConfig(async () => ({
   },
   // to make use of `TAURI_DEBUG` and other env variables
   // https://tauri.studio/v1/api/config#buildconfig.beforedevcommand
-  envPrefix: ['VITE_', 'TAURI_'],
+  envPrefix: [
+    'VITE_',
+    'TAURI_PLATFORM',
+    'TAURI_ARCH',
+    'TAURI_FAMILY',
+    'TAURI_PLATFORM_VERSION',
+    'TAURI_PLATFORM_TYPE',
+    'TAURI_DEBUG'
+  ],
   build: {
     // Tauri supports es2021
     target: process.env.TAURI_PLATFORM == 'windows' ? 'chrome105' : 'safari13',
@@ -34,4 +42,4 @@ export default defineConfig(async () => ({
     // produce sourcemaps for debug builds
     sourcemap: !!process.env.TAURI_DEBUG
   }
-}))
+})
