@@ -38,7 +38,7 @@
       "active": true,
       "endpoints": ["https://raw.githubusercontent.com/beeb/step2stl/master/updater.json"],
       "dialog": true,
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDc2MkExNUM5NTA4MUVEOEYKUldTUDdZRlF5UlVxZHVzZjFvRFJ0TE1NOVV1c0J2bmQ5YlNuSHhNa2MxTDR1R0w4MHZqN3pCSUYK"
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEYwQTQzMEY0RDEyNkM0ODgKUldTSXhDYlI5RENrOEx0T1doTFZURERhaVozVEVxeXZqeTd1Q1NSOFFCQjh5SHlJenpKOGJ3bDgK"
     },
     "windows": [
       {
