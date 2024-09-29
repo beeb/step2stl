@@ -24,31 +24,35 @@
 
   const handleClick = async () => {
     try {
-      const selected = await open({
+      const selected = (await open({
         multiple: false,
         filters: [
           {
             name: 'STEP',
-            extensions: ['step', 'stp']
+            extensions: ['step', 'stp', 'STEP', 'STP']
           }
         ]
-      })
+      })) as string
       if (selected) {
         await convert(selected)
       }
     } catch (e) {
-      toast.error(e.message)
+      let message = String(e)
+      if (e instanceof Error) {
+        message = e.message
+      }
+      toast.error(message)
     }
   }
 
-  const convert = async (path) => {
-    const extension = path.split('.').pop()
-    if (extension.toLowerCase() !== 'step') {
+  const convert = async (path: string) => {
+    const extension = path.split('.').pop() ?? ''
+    if (!['step', 'stp'].includes(extension.toLowerCase())) {
       toast.error('Only STEP files are supported')
       return
     }
     toast.promise(
-      invoke('convert', {
+      invoke<string>('convert', {
         path,
         chordError: qualityValues[quality].chordError,
         angleRes: qualityValues[quality].angleRes
@@ -67,7 +71,7 @@
     )
   }
 
-  listen('tauri://file-drop', async (event) => {
+  listen<string>('tauri://file-drop', async (event) => {
     const path = event.payload[0]
     await convert(path)
   })
