@@ -1,9 +1,12 @@
 <script lang="ts">
   import './styles.css'
-  import { listen } from '@tauri-apps/api/event'
+  import { getCurrentWebview } from '@tauri-apps/api/webview'
   import { invoke } from '@tauri-apps/api/core'
   import { open } from '@tauri-apps/plugin-dialog'
   import { default as toast, Toaster } from 'svelte-french-toast'
+  import { onMount, onDestroy } from 'svelte'
+
+  let unlisten: () => void | undefined
 
   const qualityValues = {
     fdm: {
@@ -21,6 +24,7 @@
   }
 
   let quality: keyof typeof qualityValues = 'fdm'
+  let binary = false
 
   const handleClick = async () => {
     try {
@@ -55,7 +59,8 @@
       invoke<string>('convert', {
         path,
         chordError: qualityValues[quality].chordError,
-        angleRes: qualityValues[quality].angleRes
+        angleRes: qualityValues[quality].angleRes,
+        binary
       }),
       {
         loading: 'Converting...',
@@ -71,14 +76,25 @@
     )
   }
 
-  listen<string>('tauri://file-drop', async (event) => {
-    const path = event.payload[0]
-    await convert(path)
+  onMount(async () => {
+    unlisten = await getCurrentWebview().onDragDropEvent(async (event) => {
+      if (event.payload.type === 'drop') {
+        for (const path of event.payload.paths) {
+          await convert(path)
+        }
+      }
+    })
+  })
+
+  onDestroy(() => {
+    if (unlisten) {
+      unlisten()
+    }
   })
 </script>
 
 <main class="p-6 w-full h-screen flex flex-col gap-6">
-  <div class="form-control flex-row gap-4">
+  <div class="form-control flex-row gap-2">
     <label class="label" for="quality">
       <span class="label-text">Quality:</span>
     </label>
@@ -87,6 +103,10 @@
       <option value="sla">SLA Printer</option>
       <option value="render">3D Render</option>
     </select>
+    <label class="label cursor-pointer gap-2">
+      <span class="label-text">Binary:</span>
+      <input type="checkbox" bind:checked={binary} class="checkbox" />
+    </label>
   </div>
   <div class="card bg-base-300 shadow-xl flex-grow">
     <button type="button" class="card-body flex items-center justify-center cursor-pointer" on:click={handleClick}>
