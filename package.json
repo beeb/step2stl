@@ -11,11 +11,14 @@
     "tauri": "tauri"
   },
   "dependencies": {
-    "@tauri-apps/api": "^1.6.0"
+    "@tauri-apps/api": "^2.0.0",
+    "@tauri-apps/plugin-dialog": "~2",
+    "@tauri-apps/plugin-shell": "~2",
+    "@tauri-apps/plugin-updater": "~2"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^3.1.2",
-    "@tauri-apps/cli": "^1.6.2",
+    "@tauri-apps/cli": "2.0.1",
     "@tsconfig/svelte": "^5.0.4",
     "@types/node": "^20.16.10",
     "autoprefixer": "^10.4.20",

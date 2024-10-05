@@ -13,16 +13,18 @@ edition = "2021"
 cxx-build = "1"
 dunce = "1"
 home = "0.5"
-tauri-build = { version = "1", features = [] }
+tauri-build = { version = "2", features = [] }
 
 [dependencies]
-tauri = { version = "1", features = ["dialog-open", "shell-open", "updater"] }
+tauri = { version = "2", features = [] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 anyhow = "1"
 log = "0.4"
 env_logger = "0.11"
 cxx = "1"
+tauri-plugin-shell = "2"
+tauri-plugin-dialog = "2"
 
 [features]
 # this feature is used for production builds or when `devPath` points to the filesystem
@@ -34,3 +36,6 @@ lto = true
 strip = true
 panic = "abort"
 codegen-units = 1
+
+[target.'cfg(not(any(target_os = "android", target_os = "ios")))'.dependencies]
+tauri-plugin-updater = "2"

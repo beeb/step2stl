@@ -1,8 +1,8 @@
 <script lang="ts">
   import './styles.css'
   import { listen } from '@tauri-apps/api/event'
-  import { invoke } from '@tauri-apps/api/tauri'
-  import { open } from '@tauri-apps/api/dialog'
+  import { invoke } from '@tauri-apps/api/core'
+  import { open } from '@tauri-apps/plugin-dialog'
   import { default as toast, Toaster } from 'svelte-french-toast'
 
   const qualityValues = {

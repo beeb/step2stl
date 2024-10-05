@@ -65,6 +65,9 @@ fn get_stl_path(step_path: impl AsRef<Path>) -> PathBuf {
 
 fn main() {
     tauri::Builder::default()
+        .plugin(tauri_plugin_dialog::init())
+        .plugin(tauri_plugin_shell::init())
+        .plugin(tauri_plugin_updater::Builder::new().build())
         .invoke_handler(tauri::generate_handler![convert])
         .setup(|app| {
             let args: Vec<String> = env::args().collect();
