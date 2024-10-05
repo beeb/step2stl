@@ -1,9 +1,12 @@
 <script lang="ts">
   import './styles.css'
-  import { listen } from '@tauri-apps/api/event'
+  import { getCurrentWebview } from '@tauri-apps/api/webview'
   import { invoke } from '@tauri-apps/api/core'
   import { open } from '@tauri-apps/plugin-dialog'
   import { default as toast, Toaster } from 'svelte-french-toast'
+  import { onMount, onDestroy } from 'svelte'
+
+  let unlisten: () => void | undefined
 
   const qualityValues = {
     fdm: {
@@ -73,9 +76,20 @@
     )
   }
 
-  listen<string>('tauri://file-drop', async (event) => {
-    const path = event.payload[0]
-    await convert(path)
+  onMount(async () => {
+    unlisten = await getCurrentWebview().onDragDropEvent(async (event) => {
+      if (event.payload.type === 'drop') {
+        for (const path of event.payload.paths) {
+          await convert(path)
+        }
+      }
+    })
+  })
+
+  onDestroy(() => {
+    if (unlisten) {
+      unlisten()
+    }
   })
 </script>
 
