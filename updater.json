@@ -1,11 +1,11 @@
 {
-  "version": "v0.1.3",
-  "notes": "STEP and STP extensions are now supported regardless of case.",
-  "pub_date": "2024-09-29T12:59:00Z",
+  "version": "v0.1.4",
+  "notes": "Support for binary STL output.",
+  "pub_date": "2024-10-05T18:57:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTUDdZRlF5UlVxZG5IcEErZSsrajJXNXpIVlQxcTdMQUsvYzFVZUpWdkJZOWtIRW1WT1dGR0xwUXV3V2JPVGlScmliejQwZzRHMnVKTnJ6RUNSd1NKb1dReUlaREE3VXdZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzI3NjE0Njc1CWZpbGU6c3RlcDJzdGxfMC4xLjNfeDY0X2VuLVVTLm1zaS56aXAKS2NweTVLWkE1MnBRNmJ0N0Z5V2Y5MFFEbWVCRHZTR3NrSGJ0K2M0TFFiTDlQMkNBMmc3cTlJVE8zbDYrYU9TK2VWeTBmQS9aZGZORjFlM1hlZit1Q0E9PQo=",
-      "url": "https://github.com/beeb/step2stl/releases/download/v0.1.3/step2stl_0.1.3_x64_en-US.msi.zip"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRY3VIbXFBbnJFQUdOQnpHaUEzbzVVNmR3aDZpdHMxVVpmWFJYTkd6TmlqdUFlYnRjL3gzeUs5ZUVGaHZWYWE0VlZ5OWl4WW11eVVhaE9FYXdRR3l0cTd1UHBybGczWUFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzI4MTU0NDM0CWZpbGU6c3RlcDJzdGxfMC4xLjRfeDY0X2VuLVVTLm1zaS56aXAKNE1ZSGc5S2JrLzRLb28yUm1JQklyS28wSEc0RDlaY04zNFpiUjRzdHM5bVQ5aHUyUERtMGVJN1FISzBqb1BFRDlRQUpSLytiK29kdE51aGRDa3ozRHc9PQo=",
+      "url": "https://github.com/beeb/step2stl/releases/download/v0.1.4/step2stl_0.1.4_x64_en-US.msi.zip"
     }
   }
 }
