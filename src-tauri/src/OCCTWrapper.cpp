@@ -8,7 +8,7 @@
 namespace OcctWrapper
 {
 
-    bool convert_step_to_stl(rust::String step_file_path, rust::String stl_file_path, rust::f64 chord_error, rust::f64 angle_res)
+    bool convert_step_to_stl(rust::String step_file_path, rust::String stl_file_path, rust::f64 chord_error, rust::f64 angle_res, bool binary)
     {
         STEPControl_Reader reader;
         TopoDS_Compound comp;
@@ -44,6 +44,10 @@ namespace OcctWrapper
         }
 
         StlAPI_Writer writer;
+        if (binary)
+        {
+            writer.ASCIIMode() = false;
+        }
         bool writeStatus;
         Message_ProgressRange progress = Message_ProgressRange();
         writeStatus = writer.Write(comp, stl_file_path.c_str(), progress);

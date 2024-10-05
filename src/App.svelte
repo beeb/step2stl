@@ -21,6 +21,7 @@
   }
 
   let quality: keyof typeof qualityValues = 'fdm'
+  let binary = false
 
   const handleClick = async () => {
     try {
@@ -55,7 +56,8 @@
       invoke<string>('convert', {
         path,
         chordError: qualityValues[quality].chordError,
-        angleRes: qualityValues[quality].angleRes
+        angleRes: qualityValues[quality].angleRes,
+        binary
       }),
       {
         loading: 'Converting...',
@@ -78,7 +80,7 @@
 </script>
 
 <main class="p-6 w-full h-screen flex flex-col gap-6">
-  <div class="form-control flex-row gap-4">
+  <div class="form-control flex-row gap-2">
     <label class="label" for="quality">
       <span class="label-text">Quality:</span>
     </label>
@@ -87,6 +89,10 @@
       <option value="sla">SLA Printer</option>
       <option value="render">3D Render</option>
     </select>
+    <label class="label cursor-pointer gap-2">
+      <span class="label-text">Binary:</span>
+      <input type="checkbox" bind:checked={binary} class="checkbox" />
+    </label>
   </div>
   <div class="card bg-base-300 shadow-xl flex-grow">
     <button type="button" class="card-body flex items-center justify-center cursor-pointer" on:click={handleClick}>

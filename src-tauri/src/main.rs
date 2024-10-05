@@ -22,12 +22,13 @@ mod ffi {
             stl_file_path: String,
             chord_error: f64,
             angle_res: f64,
+            binary: bool,
         ) -> bool;
     }
 }
 
 #[command]
-fn convert(path: String, chord_error: f64, angle_res: f64) -> Result<String, String> {
+fn convert(path: String, chord_error: f64, angle_res: f64, binary: bool) -> Result<String, String> {
     let path = PathBuf::from(path);
     if !path.is_file() {
         return Err("File not found".to_string());
@@ -38,6 +39,7 @@ fn convert(path: String, chord_error: f64, angle_res: f64) -> Result<String, Str
         stl_path.to_string_lossy().into_owned(),
         chord_error,
         angle_res,
+        binary,
     );
     if !res {
         return Err("Could not convert file to STL".to_string());
@@ -73,7 +75,7 @@ fn main() {
             let args: Vec<String> = env::args().collect();
             if args.len() > 1 {
                 let path = args[1].clone();
-                convert(path, DEFAULT_CHORD_ERROR, DEFAULT_ANGLE_RES)?;
+                convert(path, DEFAULT_CHORD_ERROR, DEFAULT_ANGLE_RES, false)?;
                 let handle = app.handle();
                 handle.exit(0);
             }
