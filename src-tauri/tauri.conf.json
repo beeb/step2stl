@@ -30,7 +30,7 @@
   "identifier": "li.beeb.step2stl",
   "plugins": {
     "updater": {
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEYwQTQzMEY0RDEyNkM0ODgKUldTSXhDYlI5RENrOEx0T1doTFZURERhaVozVEVxeXZqeTd1Q1NSOFFCQjh5SHlJenpKOGJ3bDgK",
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEM0N0EwMkFBNzlCODFDClJXUWN1SG1xQW5yRUFIQTZ3a1d5c2htclZhT2RuNTF1Q1dzSXZiK2IzYUlOZ29yam9iT0F3UjdpCg==",
       "endpoints": [
         "https://raw.githubusercontent.com/beeb/step2stl/master/updater.json"
       ]
