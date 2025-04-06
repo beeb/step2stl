@@ -4,8 +4,8 @@
   "pub_date": "2025-04-06T14:58:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRY3VIbXFBbnJFQUVRVWJ4OUlGRnVBckxPQ1dQa2gvbTl1OWE5Ui8yUi8rTlFlS3B2WEN2OUYxRjluYmhzVnVHeTFtUDYwT3B2K09veS9SbS9jdldJcXptSHQwbTVPakEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzQzOTUxMzU4CWZpbGU6c3RlcDJzdGxfMC4xLjVfeDY0X2VuLVVTLm1zaS56aXAKbS90MkV5KzZWOEs2UUh6R1dnSkgvNWZsODVhb251UFdObGFEczRrQ0lsWUJnclR2MmplWEdpbWhHdnNpS3k0VGxtZWxoeGkxUXFYZ1lENktJbVJzQlE9PQo=",
-      "url": "https://github.com/beeb/step2stl/releases/download/v0.1.5/step2stl_0.1.5_x64_en-US.msi.zip"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRY3VIbXFBbnJFQUFTak52a0lSQ0FkYWZ6SWhwNVBLR2Vmbkkvb0Y2REVVRnFUQjF6WVJiT2ZxYmd2MDVzUllRTTZWSFc3NVdiSUJUZnpmVHVQTENmY0hjTWcyY2JySFE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzQzOTUyODUyCWZpbGU6c3RlcDJzdGxfMC4xLjVfeDY0X2VuLVVTLm1zaQo2alhYdG1KUXU1T0ZWUG9JTHJOYzBkYnZzSUM3eEQ4aVF0VkhoWmZXM1FBejk3Tzg2QUtVRGQ5ZlBRMzZmUFJvdkg5NlhNd1NMNjJQVDNyNVNtOE5Ddz09Cg==",
+      "url": "https://github.com/beeb/step2stl/releases/download/v0.1.5/step2stl_0.1.5_x64_en-US.msi"
     }
   }
 }
