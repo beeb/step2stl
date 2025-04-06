@@ -1,11 +1,11 @@
 {
-  "version": "v0.1.4",
-  "notes": "Support for binary STL output.",
-  "pub_date": "2024-10-05T18:57:00Z",
+  "version": "v0.1.5",
+  "notes": "Maintenance and security updates.",
+  "pub_date": "2025-04-06T14:58:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRY3VIbXFBbnJFQUdOQnpHaUEzbzVVNmR3aDZpdHMxVVpmWFJYTkd6TmlqdUFlYnRjL3gzeUs5ZUVGaHZWYWE0VlZ5OWl4WW11eVVhaE9FYXdRR3l0cTd1UHBybGczWUFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzI4MTU0NDM0CWZpbGU6c3RlcDJzdGxfMC4xLjRfeDY0X2VuLVVTLm1zaS56aXAKNE1ZSGc5S2JrLzRLb28yUm1JQklyS28wSEc0RDlaY04zNFpiUjRzdHM5bVQ5aHUyUERtMGVJN1FISzBqb1BFRDlRQUpSLytiK29kdE51aGRDa3ozRHc9PQo=",
-      "url": "https://github.com/beeb/step2stl/releases/download/v0.1.4/step2stl_0.1.4_x64_en-US.msi.zip"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRY3VIbXFBbnJFQUVRVWJ4OUlGRnVBckxPQ1dQa2gvbTl1OWE5Ui8yUi8rTlFlS3B2WEN2OUYxRjluYmhzVnVHeTFtUDYwT3B2K09veS9SbS9jdldJcXptSHQwbTVPakEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzQzOTUxMzU4CWZpbGU6c3RlcDJzdGxfMC4xLjVfeDY0X2VuLVVTLm1zaS56aXAKbS90MkV5KzZWOEs2UUh6R1dnSkgvNWZsODVhb251UFdObGFEczRrQ0lsWUJnclR2MmplWEdpbWhHdnNpS3k0VGxtZWxoeGkxUXFYZ1lENktJbVJzQlE9PQo=",
+      "url": "https://github.com/beeb/step2stl/releases/download/v0.1.5/step2stl_0.1.5_x64_en-US.msi.zip"
     }
   }
 }
